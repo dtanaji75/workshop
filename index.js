@@ -3,6 +3,7 @@ dotenv.config();
 import express from 'express';
 import connection from './helpers/db.helper.js';
 const app = express();
+app.use(express.static('public'));
 app.get('/', (req, res) => {
 	res.status(200).send('Hello world');
 });
